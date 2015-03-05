@@ -2,10 +2,25 @@
 
 body {
   box-sizing: border-box;
-  background-color:#eef2f3;
   font-family: 'Montserrat', sans-serif;
   color: #9b9b9b;
   padding-top: 3em;
+}
+
+.bsnow {
+  background-image: url(../images/snow-background.jpg);
+}
+
+.bsunny {
+  background-image: url(../images/sunny-background.jpg);
+}
+
+.bcloudy {
+  background-image: url(../images/cloudy-background.jpg);
+}
+
+.brain{
+  background-image: url(../images/rainy-background.jpg);
 }
 
 main {

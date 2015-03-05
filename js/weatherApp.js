@@ -13,7 +13,7 @@ $(document).ready(function() {
     }
   });
 
-  $('select').change(function() {
+  $('.cities').change(function() {
       var city = $("select option:selected").val();
       var url =  "http://weather-api.herokuapp.com/temperature?city="+city;
     $.ajax({
@@ -22,11 +22,11 @@ $(document).ready(function() {
       success: function(data) {
         $('.temperature').html(data.temp);
         $('img').attr('src', 'images/'+data.outlook+'.svg');
+        $( '.icon' ).removeClass().addClass("icon " + data.outlook);
+        $( '.background' ).removeClass().addClass("background b" + data.outlook);
       }
     });
-
   });
-
 });
 
 String.prototype.capitalize = function() {
