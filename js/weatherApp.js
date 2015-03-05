@@ -6,26 +6,21 @@ $(document).ready(function() {
     dataType: "jsonp",
     success: function(response) {
       $.each(response.cities, function(index, city) {
-
         $('.cities').append(
-
           $("<option></option>").val(city).html(city.capitalize()+" ⌄")
-
         );
-
-
       });
     }
   });
 
-  String.prototype.capitalize = function() {
-      return this.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
-  };
-
   $('select').change(function() {
     $("select option:selected").each(function() {
-      console.log(this);
+     $(this).val();
     });
   }).trigger("change");
 
 });
+
+String.prototype.capitalize = function() {
+    return this.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
+};
