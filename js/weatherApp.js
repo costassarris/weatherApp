@@ -14,9 +14,7 @@ $(document).ready(function() {
   });
 
   $('select').change(function() {
-    $("select option:selected").each(function() {
-     $(this).val();
-    });
+      console.log($("select option:selected").val());
   }).trigger("change");
 
 });
