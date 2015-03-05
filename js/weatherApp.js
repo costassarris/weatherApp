@@ -5,25 +5,18 @@ $.ajax({
   type: "GET",
   dataType: "jsonp",
   success: function(response) {
+    $.each(response.cities, function(index, city) {
 
-  },
+      $('.cities').append(
+
+        $("<option></option>").val(city).html(city+"⌄")
+
+      );
+
+
+    });
+  }
 });
 
 
 
-
-//console.log(apiData);
-
-
-
-
-
-// var temperature = 22;
-// var weatherIcon = 'snow';
-// $.each(apiData, function(index, city) {
-//   $('.cities').append(
-//     $('<option></option>').val(city).html(city + " ⌄")
-//   );
-// });
-// $('.temperature').text(temperature);
-// $('img').attr('src', 'images/' + weatherIcon + '.svg')
