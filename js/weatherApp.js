@@ -1,5 +1,23 @@
-var apiData = $.get("http://weather-api.herokuapp.com/cities");
-console.log(apiData);
+
+
+$.ajax({
+  url: "http://weather-api.herokuapp.com/cities",
+  type: "GET",
+  dataType: "jsonp",
+  success: function(response) {
+
+  },
+});
+
+
+
+
+//console.log(apiData);
+
+
+
+
+
 // var temperature = 22;
 // var weatherIcon = 'snow';
 // $.each(apiData, function(index, city) {
