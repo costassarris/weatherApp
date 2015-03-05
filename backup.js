@@ -20,10 +20,3 @@ $.ajax({
 
 
 
-
-
-var temperature = 22;
-var weatherIcon = 'snow';
-
- $('.temperature').text(temperature);
- $('img').attr('src', 'images/' + weatherIcon + '.svg')
